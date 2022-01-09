@@ -54,13 +54,21 @@ return [[
 '[C]Symfony%5CBundle%5CFrameworkBundle%5CController%5CAbstractController%23addLink' => 1,
 'Symfony%5CBundle%5CFrameworkBundle%5CController%5CAbstractController%24container' => 0,
 '[C]Symfony%5CBundle%5CFrameworkBundle%5CController%5CAbstractController%24container' => 1,
+'App%5CController%5CAcceuilController' => 0,
+'[C]App%5CController%5CAcceuilController' => 1,
+'App%5CController%5CAcceuilController%23index' => 0,
+'[C]App%5CController%5CAcceuilController%23index' => 1,
+'App%5CController%5CRegistrationController' => 0,
+'[C]App%5CController%5CRegistrationController' => 1,
+'App%5CController%5CRegistrationController%23register' => 0,
+'[C]App%5CController%5CRegistrationController%23register' => 1,
 'App%5CController%5CSecurityController' => 0,
 '[C]App%5CController%5CSecurityController' => 1,
 'App%5CController%5CSecurityController%23login' => 2,
 '[C]App%5CController%5CSecurityController%23login' => 1,
 'App%5CController%5CSecurityController%23logout' => 3,
 '[C]App%5CController%5CSecurityController%23logout' => 1,
-'App%5CEntity%5CUser' => 0,
+'App%5CEntity%5CUser' => 4,
 '[C]App%5CEntity%5CUser' => 1,
 'App%5CEntity%5CUser%23getId' => 0,
 '[C]App%5CEntity%5CUser%23getId' => 1,
@@ -636,7 +644,7 @@ return [[
 ], [
 
 0 => [],
-1 => 1641543924,
+1 => 1641662316,
 2 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
@@ -726,6 +734,35 @@ return [[
                 ],
                 'env' => [
                     null,
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
+4 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Bridge\\Doctrine\\Validator\\Constraints\\UniqueEntity'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Bridge\\Doctrine\\Validator\\Constraints\\UniqueEntity')),
+        ],
+        null,
+        [
+            'stdClass' => [
+                'message' => [
+                    'There is already an account with this email',
+                ],
+                'fields' => [
+                    [
+                        'email',
+                    ],
+                ],
+                'groups' => [
+                    [
+                        'Default',
+                    ],
                 ],
             ],
         ],
