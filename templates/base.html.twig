@@ -25,6 +25,9 @@
 
 		{% block javascripts %}
 			{{ encore_entry_script_tags('app') }}
+			<script type="text/javascript" src="{{asset('jquery-3.5.1.min.js')}}"></script>
+			<script type="text/javascript" src="{{asset('popper.js')}}"></script>
+			<script type="text/javascript" src="{{asset('header.js')}}"></script>
 		{% endblock %}
 	</head>
 	<body>
