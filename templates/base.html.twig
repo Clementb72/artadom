@@ -22,12 +22,18 @@
 			<link rel="stylesheet" type="text/css" href="{{asset('css/research.css')}}"/>
 			<link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}"/>
 		{% endblock %}
-
+		
 		{% block javascripts %}
 			{{ encore_entry_script_tags('app') }}
-			<script type="text/javascript" src="{{asset('jquery-3.5.1.min.js')}}"></script>
-			<script type="text/javascript" src="{{asset('popper.js')}}"></script>
-			<script type="text/javascript" src="{{asset('header.js')}}"></script>
+			<script type="text/javascript" src="{{asset('js/jquery-3.5.1.min.js')}}"></script>
+			<script type="text/javascript" src="{{asset('js/popper.js')}}"></script>
+			<script type="text/javascript" src="{{asset('js/header.js')}}"></script>
+			<script type="text/javascript" src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
+			<script type="text/javascript" src="{{asset('js/bootstrap.bundle.min.js.map')}}"></script>
+			<script type="text/javascript" src="{{asset('js/arrow.js')}}"></script>
+			<script type="text/javascript" src="{{asset('js/extention/choices.js')}}"></script>
+			<script type="text/javascript" src="{{asset('js/extention/custom-materialize.js')}}"></script>
+			<script type="text/javascript" src="{{asset('js/extention/flatpickr.js')}}"></script>
 		{% endblock %}
 	</head>
 	<body>

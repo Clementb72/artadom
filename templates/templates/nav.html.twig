@@ -39,15 +39,18 @@
 						{% else %}
 							<div class="dropdown">
 								<button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-									Utilisateur: {{user.email}}
+									Utilisateur:
+									{{user.email}}
 								</button>
 								<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
 									<li>
 										<a class="dropdown-item" href="index.php?section=voirCompte">Voir compte</a>
 									</li>
-									<li>
-										<a class="dropdown-item" href="index.php?section=ajoutPrestation">Ajouter une prestation</a>
-									</li>
+									{% if user.isArtiste == 1 %}
+										<li>
+											<a class="dropdown-item" href="index.php?section=ajoutPrestation">Ajouter une prestation</a>
+										</li>
+									{% endif %}
 									<li>
 										<a class="dropdown-item" href={{url("app_logout")}}>Se déconnecter</a>
 									</li>

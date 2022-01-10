@@ -119,14 +119,9 @@ class __TwigTemplate_0bc53bad8860af6f8aec274be0e2b38aea91e892bc0a787f7d2c83d20d9
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<input id=\"prixMax\" name=\"prixMax\" type=\"text\" placeholder=\"Prix max...\"/>
 \t\t\t\t\t</div>
-\t\t\t\t\t<div class=\"input-field third-wrap\">
-\t\t\t\t\t\t<div class=\"icon-wrap\">
-\t\t\t\t\t\t\t<p style='transform: translate(0%,35%);'>📅</p>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<!--this goes unused-->
-\t\t\t\t\t\t<input class=\"datepicker\" id=\"return\" type=\"date\" placeholder=\"30 Aug 2018\"/>
-\t\t\t\t\t</div>
-\t\t\t\t\t<div class=\"input-field fifth-wrap\">
+\t\t\t\t\t";
+        // line 44
+        echo "\t\t\t\t\t<div class=\"input-field fifth-wrap\">
 \t\t\t\t\t\t<button class=\"btn-search\" type=\"submit\">RECHERCHER</button>
 \t\t\t\t\t</div>
 \t\t\t\t</div>
@@ -155,7 +150,7 @@ class __TwigTemplate_0bc53bad8860af6f8aec274be0e2b38aea91e892bc0a787f7d2c83d20d9
 
     public function getDebugInfo()
     {
-        return array (  94 => 9,  92 => 8,  89 => 7,  79 => 6,  59 => 3,  36 => 1,);
+        return array (  124 => 44,  94 => 9,  92 => 8,  89 => 7,  79 => 6,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -196,13 +191,13 @@ class __TwigTemplate_0bc53bad8860af6f8aec274be0e2b38aea91e892bc0a787f7d2c83d20d9
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<input id=\"prixMax\" name=\"prixMax\" type=\"text\" placeholder=\"Prix max...\"/>
 \t\t\t\t\t</div>
-\t\t\t\t\t<div class=\"input-field third-wrap\">
+\t\t\t\t\t{# <div class=\"input-field third-wrap\">
 \t\t\t\t\t\t<div class=\"icon-wrap\">
 \t\t\t\t\t\t\t<p style='transform: translate(0%,35%);'>📅</p>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<!--this goes unused-->
 \t\t\t\t\t\t<input class=\"datepicker\" id=\"return\" type=\"date\" placeholder=\"30 Aug 2018\"/>
-\t\t\t\t\t</div>
+\t\t\t\t\t</div> #}
 \t\t\t\t\t<div class=\"input-field fifth-wrap\">
 \t\t\t\t\t\t<button class=\"btn-search\" type=\"submit\">RECHERCHER</button>
 \t\t\t\t\t</div>
