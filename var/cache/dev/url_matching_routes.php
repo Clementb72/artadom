@@ -15,7 +15,9 @@ return [
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
         '/' => [[['_route' => 'app_acceuil', '_controller' => 'App\\Controller\\AcceuilController::index'], null, null, null, false, false, null]],
         '/admin' => [[['_route' => 'admin', '_controller' => 'App\\Controller\\Admin\\DashboardController::index'], null, null, null, false, false, null]],
-        '/artiste' => [[['_route' => 'artiste', '_controller' => 'App\\Controller\\ArtisteController::index'], null, null, null, false, false, null]],
+        '/artiste' => [[['_route' => 'app_artistes', '_controller' => 'App\\Controller\\ArtisteController::index'], null, null, null, false, false, null]],
+        '/collectif' => [[['_route' => 'app_collectif', '_controller' => 'App\\Controller\\CollectifController::index'], null, null, null, false, false, null]],
+        '/profil' => [[['_route' => 'app_profil', '_controller' => 'App\\Controller\\ProfilController::index'], null, null, null, false, false, null]],
         '/register' => [[['_route' => 'app_register', '_controller' => 'App\\Controller\\RegistrationController::register'], null, null, null, false, false, null]],
         '/login' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\SecurityController::logout'], null, null, null, false, false, null]],
@@ -37,6 +39,7 @@ return [
                     .')'
                     .'|error/(\\d+)(?:\\.([^/]++))?(*:159)'
                 .')'
+                .'|/artiste/&id\\=([^/]++)(*:190)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -46,8 +49,9 @@ return [
         101 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         114 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         124 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        159 => [
-            [['_route' => '_preview_error', '_controller' => 'error_controller::preview', '_format' => 'html'], ['code', '_format'], null, null, false, true, null],
+        159 => [[['_route' => '_preview_error', '_controller' => 'error_controller::preview', '_format' => 'html'], ['code', '_format'], null, null, false, true, null]],
+        190 => [
+            [['_route' => 'app_infos_artiste', '_controller' => 'App\\Controller\\ArtisteController::infos'], ['id'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

@@ -106,3 +106,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     display: none;
     -webkit-appearance: none;
 }
+
+#flex{
+  display: flex;
+  justify-content: space-around;
+}

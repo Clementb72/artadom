@@ -28,6 +28,9 @@ class Artiste
     #[ORM\Column(type: 'boolean')]
     private $estGroupe;
 
+    #[ORM\OneToOne(targetEntity: DrTypeArtiste::class, cascade: ['persist', 'remove'])]
+    private $dr_type_artiste;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -89,6 +92,18 @@ class Artiste
     public function setEstGroupe(bool $estGroupe): self
     {
         $this->estGroupe = $estGroupe;
+
+        return $this;
+    }
+
+    public function getDrTypeArtiste(): ?DrTypeArtiste
+    {
+        return $this->dr_type_artiste;
+    }
+
+    public function setDrTypeArtiste(?DrTypeArtiste $dr_type_artiste): self
+    {
+        $this->dr_type_artiste = $dr_type_artiste;
 
         return $this;
     }

@@ -10,43 +10,45 @@
 
 	<main>
 		<div class="container s002">
-			<form action="index.php" method="get">
-				<fieldset>
-					<legend>TROUVER UN ARTISTE</legend>
-				</fieldset>
-				<div class="inner-form">
-					<input type="hidden" id="section" name="section" value="artistes">
-					<div class="input-field first-wrap">
-						<div class="icon-wrap">
-							<p style='transform: translate(0%,35%);'>🔎</p>
-						</div>
-						<input id="Pseudo" name="Pseudo" type="text" placeholder="Rechercher un artiste ..."/>
-					</div>
-					<div class="input-field second-wrap">
-						<div class="icon-wrap">
-							<p style='transform: translate(0%,35%);'>💰</p>
-						</div>
-						<input id="prixMin" name="prixMin" type="text" placeholder="Prix min..."/>
-					</div>
-					<div class="input-field second-wrap">
-						<div class="icon-wrap">
-							<p style='transform: translate(0%,35%);'>💰</p>
-						</div>
-						<input id="prixMax" name="prixMax" type="text" placeholder="Prix max..."/>
-					</div>
-					{# <div class="input-field third-wrap">
-						<div class="icon-wrap">
-							<p style='transform: translate(0%,35%);'>📅</p>
-						</div>
-						<!--this goes unused-->
-						<input class="datepicker" id="return" type="date" placeholder="30 Aug 2018"/>
-					</div> #}
-					<div class="input-field fifth-wrap">
-						<button class="btn-search" type="submit">RECHERCHER</button>
-					</div>
-				</div>
-			</form>
+				<h3><i class="fas fa-h3"></i>BIENVENUE SUR ART-A-Dom!</h3>
+			{# <form action="index.php" method="get">
+							<fieldset>
+								<legend>TROUVER UN ARTISTE</legend>
+							</fieldset>
+							<div class="inner-form">
+								<input type="hidden" id="section" name="section" value="artistes">
+								<div class="input-field first-wrap">
+									<div class="icon-wrap">
+										<p style='transform: translate(0%,35%);'>🔎</p>
+									</div>
+									<input id="Pseudo" name="Pseudo" type="text" placeholder="Rechercher un artiste ..."/>
+								</div>
+								<div class="input-field second-wrap">
+									<div class="icon-wrap">
+										<p style='transform: translate(0%,35%);'>💰</p>
+									</div>
+									<input id="prixMin" name="prixMin" type="text" placeholder="Prix min..."/>
+								</div>
+								<div class="input-field second-wrap">
+									<div class="icon-wrap">
+										<p style='transform: translate(0%,35%);'>💰</p>
+									</div>
+									<input id="prixMax" name="prixMax" type="text" placeholder="Prix max..."/>
+								</div>
+								<div class="input-field third-wrap">
+									<div class="icon-wrap">
+										<p style='transform: translate(0%,35%);'>📅</p>
+									</div>
+									<!--this goes unused-->
+									<input class="datepicker" id="return" type="date" placeholder="30 Aug 2018"/>
+								</div>
+								<div class="input-field fifth-wrap">
+									<button class="btn-search" type="submit">RECHERCHER</button>
+								</div>
+							</div>
+						</form> #}
 		</div>
 
+		{% include "templates/footer.html.twig" %}
 	</main>
 {% endblock %}

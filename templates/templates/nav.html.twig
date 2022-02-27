@@ -14,10 +14,10 @@
 								<a class="nav-link" style="color: #fff;" href={{url("app_acceuil")}}>Accueil</a>
 							</li>
 							<li class="nav-item ">
-								<a class="nav-link" style="color: #fff;" href="index.php?section=collectif">Le collectif</a>
+								<a class="nav-link" style="color: #fff;" href={{url("app_collectif")}}>Le collectif</a>
 							</li>
 							<li class="nav-item mx-5">
-								<a class="nav-link" style="color: #fff;" href="index.php?section=artistes">Les artistes</a>
+								<a class="nav-link" style="color: #fff;" href={{url("app_artistes")}}>Les artistes</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" style="color: #fff;" href="index.php?section=prestations">Les prestations</a>
@@ -25,37 +25,40 @@
 						</ul>
 					</div>
 					<div class="col-3">
-						{% if user is null %}
-							<div class="btn-group" role="group" aria-label="Basic example">
-								<a href={{url("app_register")}}>
-									<button type="button" class="btn btn-light">Inscription</button>
-								</a>
-							</div>
-							<div class="btn-group" role="group" aria-label="Basic example">
-								<a href={{url("app_login")}}>
-									<button type="button" class="btn btn-primary">Connexion</button>
-								</a>
-							</div>
-						{% else %}
-							<div class="dropdown">
-								<button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-									Utilisateur:
-									{{user.email}}
-								</button>
-								<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-									<li>
-										<a class="dropdown-item" href="index.php?section=voirCompte">Voir compte</a>
-									</li>
-									{% if user.isArtiste == 1 %}
+						{% if user is defined %}
+							{% if user is null %}
+								<div class="btn-group" role="group" aria-label="Basic example">
+									<a href={{url("app_register")}}>
+										<button type="button" class="btn btn-light">Inscription</button>
+									</a>
+								</div>
+								<div class="btn-group" role="group" aria-label="Basic example">
+									<a href={{url("app_login")}}>
+										<button type="button" class="btn btn-primary">Connexion</button>
+									</a>
+								</div>
+							{% else %}
+								<div class="dropdown">
+									<button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+										Utilisateur:
+										{{user.email}}
+									</button>
+									<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
 										<li>
-											<a class="dropdown-item" href="index.php?section=ajoutPrestation">Ajouter une prestation</a>
+											<a class="dropdown-item" href={{url("app_profil")}}>Voir compte</a>
 										</li>
-									{% endif %}
-									<li>
-										<a class="dropdown-item" href={{url("app_logout")}}>Se déconnecter</a>
-									</li>
-								</ul>
-							</div>
+										{% if user.isArtiste == 1 %}
+											<li>
+												<a class="dropdown-item" href="index.php?section=ajoutPrestation">Ajouter une prestation</a>
+											</li>
+										{% endif %}
+										<li>
+											<a class="dropdown-item" href={{url("app_logout")}}>Se déconnecter</a>
+										</li>
+									</ul>
+								</div>
+							{% endif %}
+
 						{% endif %}
 
 					</div>

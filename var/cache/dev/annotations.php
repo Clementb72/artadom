@@ -142,6 +142,14 @@ return [[
 '[C]App%5CController%5CAdmin%5CUserCrudController' => 1,
 'App%5CController%5CAdmin%5CUserCrudController%23getEntityFqcn' => 0,
 '[C]App%5CController%5CAdmin%5CUserCrudController%23getEntityFqcn' => 1,
+'App%5CController%5CArtisteController' => 0,
+'[C]App%5CController%5CArtisteController' => 1,
+'App%5CController%5CArtisteController%23index' => 0,
+'[C]App%5CController%5CArtisteController%23index' => 1,
+'App%5CController%5CCollectifController' => 0,
+'[C]App%5CController%5CCollectifController' => 1,
+'App%5CController%5CCollectifController%23index' => 0,
+'[C]App%5CController%5CCollectifController%23index' => 1,
 'App%5CController%5CRegistrationController' => 0,
 '[C]App%5CController%5CRegistrationController' => 1,
 'App%5CController%5CRegistrationController%23register' => 0,
@@ -846,7 +854,7 @@ return [[
 ], [
 
 0 => [],
-1 => 1641824580,
+1 => 1645981347,
 2 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [

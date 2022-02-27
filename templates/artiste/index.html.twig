@@ -1,40 +1,33 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ArtisteController!
+{% block title %}Artistes
 {% endblock %}
 
 {% block body %}
-	<style>
-		.example-wrapper {
-			margin: 1em auto;
-			max-width: 800px;
-			width: 95%;
-			font: 18px / 1.5 sans-serif;
-		}
-		.example-wrapper code {
-			background: #F5F5F5;
-			padding: 2px 6px;
-		}
-	</style>
 
-	<div class="example-wrapper">
-		<h1>Hello
-			{{ controller_name }}! ✅</h1>
-		{% for art in artiste %}
-            {{art.id}}
-        {% endfor %}
-		This friendly message is coming from:
-		<ul>
-			<li>Your controller at
-				<code>
-					<a href="{{ '/var/www/app/src/Controller/ArtisteController.php'|file_link(0) }}">src/Controller/ArtisteController.php</a>
-				</code>
-			</li>
-			<li>Your template at
-				<code>
-					<a href="{{ '/var/www/app/templates/artiste/index.html.twig'|file_link(0) }}">templates/artiste/index.html.twig</a>
-				</code>
-			</li>
-		</ul>
+	{% include "templates/nav.html.twig" %}
+
+	<div class="container">
+		<h2 class="text-center mx-auto">Artistes</h2>
+		<div class="row">
+			<div class="col">
+				<div class="row" id="flex">
+					{% for art in artiste %}
+						<div class="card bg-light text-center" style="max-width: 18rem; background-color: rgba(255,255,255,0.7) ; ">
+							<div class="card-body">
+								<a href="{{path("app_infos_artiste", {'id':art.id})}}" style="text-decoration: none ; color: #000000 ; ">
+									<img src={{asset("images/"~art.imgArtiste)}} class="img-fluid img-center" width="200" height="200">
+									<h5 class="card-title">{{art.Pseudo}}</h5>
+									<p class="card-text">{{art.localisation}}</p>
+								</a>
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
 	</div>
+
+	{% include "templates/footer.html.twig" %}
+
 {% endblock %}

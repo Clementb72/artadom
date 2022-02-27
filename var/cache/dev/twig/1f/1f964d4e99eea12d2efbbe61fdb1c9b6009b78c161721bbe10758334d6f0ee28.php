@@ -64,10 +64,16 @@ class __TwigTemplate_ef23def78cc3411b1c944faaa3f45c2791ac891518ed24d929edd2d8192
         echo ">Accueil</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li class=\"nav-item \">
-\t\t\t\t\t\t\t\t<a class=\"nav-link\" style=\"color: #fff;\" href=\"index.php?section=collectif\">Le collectif</a>
+\t\t\t\t\t\t\t\t<a class=\"nav-link\" style=\"color: #fff;\" href=";
+        // line 17
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("app_collectif");
+        echo ">Le collectif</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li class=\"nav-item mx-5\">
-\t\t\t\t\t\t\t\t<a class=\"nav-link\" style=\"color: #fff;\" href=\"index.php?section=artistes\">Les artistes</a>
+\t\t\t\t\t\t\t\t<a class=\"nav-link\" style=\"color: #fff;\" href=";
+        // line 20
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("app_artistes");
+        echo ">Les artistes</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t\t<a class=\"nav-link\" style=\"color: #fff;\" href=\"index.php?section=prestations\">Les prestations</a>
@@ -77,60 +83,70 @@ class __TwigTemplate_ef23def78cc3411b1c944faaa3f45c2791ac891518ed24d929edd2d8192
 \t\t\t\t\t<div class=\"col-3\">
 \t\t\t\t\t\t";
         // line 28
-        if ((null === (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 28, $this->source); })()))) {
+        if (array_key_exists("user", $context)) {
             // line 29
-            echo "\t\t\t\t\t\t\t<div class=\"btn-group\" role=\"group\" aria-label=\"Basic example\">
-\t\t\t\t\t\t\t\t<a href=";
-            // line 30
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("app_register");
-            echo ">
-\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-light\">Inscription</button>
-\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t<div class=\"btn-group\" role=\"group\" aria-label=\"Basic example\">
-\t\t\t\t\t\t\t\t<a href=";
-            // line 35
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("app_login");
-            echo ">
-\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-primary\">Connexion</button>
-\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t";
-        } else {
-            // line 40
-            echo "\t\t\t\t\t\t\t<div class=\"dropdown\">
-\t\t\t\t\t\t\t\t<button class=\"btn btn-primary dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton1\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">
-\t\t\t\t\t\t\t\t\tUtilisateur:
-\t\t\t\t\t\t\t\t\t";
-            // line 43
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 43, $this->source); })()), "email", [], "any", false, false, false, 43), "html", null, true);
-            echo "
-\t\t\t\t\t\t\t\t</button>
-\t\t\t\t\t\t\t\t<ul class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton1\">
-\t\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"index.php?section=voirCompte\">Voir compte</a>
-\t\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t\t";
-            // line 49
-            if ((twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 49, $this->source); })()), "isArtiste", [], "any", false, false, false, 49) == 1)) {
-                // line 50
-                echo "\t\t\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"index.php?section=ajoutPrestation\">Ajouter une prestation</a>
+            echo "\t\t\t\t\t\t\t";
+            if ((null === (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 29, $this->source); })()))) {
+                // line 30
+                echo "\t\t\t\t\t\t\t\t<div class=\"btn-group\" role=\"group\" aria-label=\"Basic example\">
+\t\t\t\t\t\t\t\t\t<a href=";
+                // line 31
+                echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("app_register");
+                echo ">
+\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-light\">Inscription</button>
+\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t<div class=\"btn-group\" role=\"group\" aria-label=\"Basic example\">
+\t\t\t\t\t\t\t\t\t<a href=";
+                // line 36
+                echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("app_login");
+                echo ">
+\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-primary\">Connexion</button>
+\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t";
+            } else {
+                // line 41
+                echo "\t\t\t\t\t\t\t\t<div class=\"dropdown\">
+\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton1\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">
+\t\t\t\t\t\t\t\t\t\tUtilisateur:
+\t\t\t\t\t\t\t\t\t\t";
+                // line 44
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 44, $this->source); })()), "email", [], "any", false, false, false, 44), "html", null, true);
+                echo "
+\t\t\t\t\t\t\t\t\t</button>
+\t\t\t\t\t\t\t\t\t<ul class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton1\">
+\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=";
+                // line 48
+                echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("app_profil");
+                echo ">Voir compte</a>
 \t\t\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t\t";
+\t\t\t\t\t\t\t\t\t\t";
+                // line 50
+                if ((twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 50, $this->source); })()), "isArtiste", [], "any", false, false, false, 50) == 1)) {
+                    // line 51
+                    echo "\t\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"index.php?section=ajoutPrestation\">Ajouter une prestation</a>
+\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t";
+                }
+                // line 55
+                echo "\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=";
+                // line 56
+                echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("app_logout");
+                echo ">Se déconnecter</a>
+\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t";
             }
-            // line 54
-            echo "\t\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=";
-            // line 55
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("app_logout");
-            echo ">Se déconnecter</a>
-\t\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t</ul>
-\t\t\t\t\t\t\t</div>
+            // line 61
+            echo "
 \t\t\t\t\t\t";
         }
-        // line 60
+        // line 63
         echo "
 \t\t\t\t\t</div>
 \t\t\t\t</div>
@@ -159,7 +175,7 @@ class __TwigTemplate_ef23def78cc3411b1c944faaa3f45c2791ac891518ed24d929edd2d8192
 
     public function getDebugInfo()
     {
-        return array (  134 => 60,  126 => 55,  123 => 54,  117 => 50,  115 => 49,  106 => 43,  101 => 40,  93 => 35,  85 => 30,  82 => 29,  80 => 28,  63 => 14,  50 => 6,  43 => 1,);
+        return array (  150 => 63,  146 => 61,  138 => 56,  135 => 55,  129 => 51,  127 => 50,  122 => 48,  115 => 44,  110 => 41,  102 => 36,  94 => 31,  91 => 30,  88 => 29,  86 => 28,  75 => 20,  69 => 17,  63 => 14,  50 => 6,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -180,10 +196,10 @@ class __TwigTemplate_ef23def78cc3411b1c944faaa3f45c2791ac891518ed24d929edd2d8192
 \t\t\t\t\t\t\t\t<a class=\"nav-link\" style=\"color: #fff;\" href={{url(\"app_acceuil\")}}>Accueil</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li class=\"nav-item \">
-\t\t\t\t\t\t\t\t<a class=\"nav-link\" style=\"color: #fff;\" href=\"index.php?section=collectif\">Le collectif</a>
+\t\t\t\t\t\t\t\t<a class=\"nav-link\" style=\"color: #fff;\" href={{url(\"app_collectif\")}}>Le collectif</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li class=\"nav-item mx-5\">
-\t\t\t\t\t\t\t\t<a class=\"nav-link\" style=\"color: #fff;\" href=\"index.php?section=artistes\">Les artistes</a>
+\t\t\t\t\t\t\t\t<a class=\"nav-link\" style=\"color: #fff;\" href={{url(\"app_artistes\")}}>Les artistes</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t\t<a class=\"nav-link\" style=\"color: #fff;\" href=\"index.php?section=prestations\">Les prestations</a>
@@ -191,37 +207,40 @@ class __TwigTemplate_ef23def78cc3411b1c944faaa3f45c2791ac891518ed24d929edd2d8192
 \t\t\t\t\t\t</ul>
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"col-3\">
-\t\t\t\t\t\t{% if user is null %}
-\t\t\t\t\t\t\t<div class=\"btn-group\" role=\"group\" aria-label=\"Basic example\">
-\t\t\t\t\t\t\t\t<a href={{url(\"app_register\")}}>
-\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-light\">Inscription</button>
-\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t<div class=\"btn-group\" role=\"group\" aria-label=\"Basic example\">
-\t\t\t\t\t\t\t\t<a href={{url(\"app_login\")}}>
-\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-primary\">Connexion</button>
-\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t{% else %}
-\t\t\t\t\t\t\t<div class=\"dropdown\">
-\t\t\t\t\t\t\t\t<button class=\"btn btn-primary dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton1\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">
-\t\t\t\t\t\t\t\t\tUtilisateur:
-\t\t\t\t\t\t\t\t\t{{user.email}}
-\t\t\t\t\t\t\t\t</button>
-\t\t\t\t\t\t\t\t<ul class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton1\">
-\t\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"index.php?section=voirCompte\">Voir compte</a>
-\t\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t\t{% if user.isArtiste == 1 %}
+\t\t\t\t\t\t{% if user is defined %}
+\t\t\t\t\t\t\t{% if user is null %}
+\t\t\t\t\t\t\t\t<div class=\"btn-group\" role=\"group\" aria-label=\"Basic example\">
+\t\t\t\t\t\t\t\t\t<a href={{url(\"app_register\")}}>
+\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-light\">Inscription</button>
+\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t<div class=\"btn-group\" role=\"group\" aria-label=\"Basic example\">
+\t\t\t\t\t\t\t\t\t<a href={{url(\"app_login\")}}>
+\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-primary\">Connexion</button>
+\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t{% else %}
+\t\t\t\t\t\t\t\t<div class=\"dropdown\">
+\t\t\t\t\t\t\t\t\t<button class=\"btn btn-primary dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton1\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">
+\t\t\t\t\t\t\t\t\t\tUtilisateur:
+\t\t\t\t\t\t\t\t\t\t{{user.email}}
+\t\t\t\t\t\t\t\t\t</button>
+\t\t\t\t\t\t\t\t\t<ul class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton1\">
 \t\t\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"index.php?section=ajoutPrestation\">Ajouter une prestation</a>
+\t\t\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href={{url(\"app_profil\")}}>Voir compte</a>
 \t\t\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t\t{% endif %}
-\t\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href={{url(\"app_logout\")}}>Se déconnecter</a>
-\t\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t</ul>
-\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t{% if user.isArtiste == 1 %}
+\t\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"index.php?section=ajoutPrestation\">Ajouter une prestation</a>
+\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t{% endif %}
+\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href={{url(\"app_logout\")}}>Se déconnecter</a>
+\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t{% endif %}
+
 \t\t\t\t\t\t{% endif %}
 
 \t\t\t\t\t</div>

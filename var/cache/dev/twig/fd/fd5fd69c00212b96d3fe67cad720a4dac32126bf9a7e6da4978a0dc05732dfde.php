@@ -98,12 +98,12 @@ class __TwigTemplate_6e0f913a9ff34bbfae869cb4d972bd1e090133dc05ace7be99fc01bc47b
         // line 10
         echo "
     <h1 class=\"h3 mb-3 font-weight-normal\">Please sign in</h1>
-    <label for=\"inputEmail\" class=\"sr-only\">Email</label>
+    <label for=\"inputEmail\" style=\"color: #ffffff;\" class=\"sr-only\">Email</label>
     <input type=\"email\" value=\"";
         // line 13
         echo twig_escape_filter($this->env, (isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new RuntimeError('Variable "last_username" does not exist.', 13, $this->source); })()), "html", null, true);
         echo "\" name=\"email\" id=\"inputEmail\" class=\"form-control\" placeholder=\"Email\" required autofocus>
-    <label for=\"inputPassword\" class=\"sr-only\">Password</label>
+    <label for=\"inputPassword\" style=\"color: #ffffff;\" class=\"sr-only\">Password</label>
     <input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control\" placeholder=\"Password\" required>
 
     <input type=\"hidden\" name=\"_csrf_token\"
@@ -157,9 +157,9 @@ class __TwigTemplate_6e0f913a9ff34bbfae869cb4d972bd1e090133dc05ace7be99fc01bc47b
     {% endif %}
 
     <h1 class=\"h3 mb-3 font-weight-normal\">Please sign in</h1>
-    <label for=\"inputEmail\" class=\"sr-only\">Email</label>
+    <label for=\"inputEmail\" style=\"color: #ffffff;\" class=\"sr-only\">Email</label>
     <input type=\"email\" value=\"{{ last_username }}\" name=\"email\" id=\"inputEmail\" class=\"form-control\" placeholder=\"Email\" required autofocus>
-    <label for=\"inputPassword\" class=\"sr-only\">Password</label>
+    <label for=\"inputPassword\" style=\"color: #ffffff;\" class=\"sr-only\">Password</label>
     <input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control\" placeholder=\"Password\" required>
 
     <input type=\"hidden\" name=\"_csrf_token\"

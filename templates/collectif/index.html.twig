@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Art-A-Dom!
+{% endblock %}
+
+{% block body %}
+
+	{% include "templates/nav.html.twig" %}
+    <main>
+    <div class="container">
+        <h2 class="sous-titre mb-5">QUI SOMMES NOUS ?</h2>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6">
+                    <p style="color : #ffffff ;">Le monde de la culture est dans une mauvaise passe à cause de la crise
+                        sanitaire actuelle.<br> <br>Le collectif Art-A-Dom se mobilise pour permettre aux artistes de se produire
+                        à la demande.
+                        Chant, musique, danse mais aussi magie ou bien encore du rire… Les artistes viennent chez vous, à
+                        domicile ou dans la rue selon votre souhait  ! Une bonne <br>initiative du collectif Art-A-Dom
+                        ... <br><br>
+                        Concrètement, il est possible de réserver une prestation à domicile à condition <br>d’habiter
+                        dans le périmètre de production de l'artiste en question. Sinon <br>des prestations en
+                        ligne sont possibles (prendre contact directement avec les artistes) via notre site. </p>
+                </div>
+                <div class="col-6">
+                    <img src="{{asset("images/artiste.jpg")}}">
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class=col-6>
+                    <img src="{{asset("images/artiste2.jpg")}}">
+                </div>
+                <div class="col-5">
+                    <p class="description " style="color : #ffffff ;">Actuellement 5 catégories de prestations : <br> - la magie avec nos magiciens talenteux<br>- nos comédiens qui se déplacent pour vous faire rire<br>-
+                        les concerts de musique ou encore les petites symphonies pour accompagner vos évènements<br>- le chant et les chorales, gospel ...<br>- sans oublier
+                        les spectacles de danses avec nos groupes disponibles. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+	{% include "templates/footer.html.twig" %}
+	</main>
+{% endblock %}

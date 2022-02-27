@@ -65,7 +65,7 @@ class __TwigTemplate_049b12313cda04c2d5d74179f3b88440af9abe81c6d20feeefde69b0d22
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Hello ArtisteController!
+        echo "Artistes
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -86,60 +86,60 @@ class __TwigTemplate_049b12313cda04c2d5d74179f3b88440af9abe81c6d20feeefde69b0d22
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 7
-        echo "\t<style>
-\t\t.example-wrapper {
-\t\t\tmargin: 1em auto;
-\t\t\tmax-width: 800px;
-\t\t\twidth: 95%;
-\t\t\tfont: 18px / 1.5 sans-serif;
-\t\t}
-\t\t.example-wrapper code {
-\t\t\tbackground: #F5F5F5;
-\t\t\tpadding: 2px 6px;
-\t\t}
-\t</style>
-
-\t<div class=\"example-wrapper\">
-\t\t<h1>Hello
-\t\t\t";
-        // line 22
-        echo twig_escape_filter($this->env, (isset($context["controller_name"]) || array_key_exists("controller_name", $context) ? $context["controller_name"] : (function () { throw new RuntimeError('Variable "controller_name" does not exist.', 22, $this->source); })()), "html", null, true);
-        echo "! ✅</h1>
-\t\t";
-        // line 23
+        echo "
+\t";
+        // line 8
+        $this->loadTemplate("templates/nav.html.twig", "artiste/index.html.twig", 8)->display($context);
+        // line 9
+        echo "
+\t<div class=\"container\">
+\t\t<h2 class=\"text-center mx-auto\">Artistes</h2>
+\t\t<div class=\"row\">
+\t\t\t<div class=\"col\">
+\t\t\t\t<div class=\"row\" id=\"flex\">
+\t\t\t\t\t";
+        // line 15
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["artiste"]) || array_key_exists("artiste", $context) ? $context["artiste"] : (function () { throw new RuntimeError('Variable "artiste" does not exist.', 23, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["artiste"]) || array_key_exists("artiste", $context) ? $context["artiste"] : (function () { throw new RuntimeError('Variable "artiste" does not exist.', 15, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["art"]) {
-            // line 24
-            echo "            ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["art"], "id", [], "any", false, false, false, 24), "html", null, true);
-            echo "
-        ";
+            // line 16
+            echo "\t\t\t\t\t\t<div class=\"card bg-light text-center\" style=\"max-width: 18rem; background-color: rgba(255,255,255,0.7) ; \">
+\t\t\t\t\t\t\t<div class=\"card-body\">
+\t\t\t\t\t\t\t\t<a href=\"";
+            // line 18
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_infos_artiste", ["id" => twig_get_attribute($this->env, $this->source, $context["art"], "id", [], "any", false, false, false, 18)]), "html", null, true);
+            echo "\" style=\"text-decoration: none ; color: #000000 ; \">
+\t\t\t\t\t\t\t\t\t<img src=";
+            // line 19
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("images/" . twig_get_attribute($this->env, $this->source, $context["art"], "imgArtiste", [], "any", false, false, false, 19))), "html", null, true);
+            echo " class=\"img-fluid img-center\" width=\"200\" height=\"200\">
+\t\t\t\t\t\t\t\t\t<h5 class=\"card-title\">";
+            // line 20
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["art"], "Pseudo", [], "any", false, false, false, 20), "html", null, true);
+            echo "</h5>
+\t\t\t\t\t\t\t\t\t<p class=\"card-text\">";
+            // line 21
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["art"], "localisation", [], "any", false, false, false, 21), "html", null, true);
+            echo "</p>
+\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['art'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 26
-        echo "\t\tThis friendly message is coming from:
-\t\t<ul>
-\t\t\t<li>Your controller at
-\t\t\t\t<code>
-\t\t\t\t\t<a href=\"";
-        // line 30
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\CodeExtension']->getFileLink("/var/www/app/src/Controller/ArtisteController.php", 0), "html", null, true);
-        echo "\">src/Controller/ArtisteController.php</a>
-\t\t\t\t</code>
-\t\t\t</li>
-\t\t\t<li>Your template at
-\t\t\t\t<code>
-\t\t\t\t\t<a href=\"";
-        // line 35
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\CodeExtension']->getFileLink("/var/www/app/templates/artiste/index.html.twig", 0), "html", null, true);
-        echo "\">templates/artiste/index.html.twig</a>
-\t\t\t\t</code>
-\t\t\t</li>
-\t\t</ul>
+        echo "\t\t\t\t</div>
+\t\t\t</div>
+\t\t</div>
 \t</div>
+
+\t";
+        // line 31
+        $this->loadTemplate("templates/footer.html.twig", "artiste/index.html.twig", 31)->display($context);
+        // line 32
+        echo "
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -161,50 +161,43 @@ class __TwigTemplate_049b12313cda04c2d5d74179f3b88440af9abe81c6d20feeefde69b0d22
 
     public function getDebugInfo()
     {
-        return array (  137 => 35,  129 => 30,  123 => 26,  114 => 24,  110 => 23,  106 => 22,  89 => 7,  79 => 6,  59 => 3,  36 => 1,);
+        return array (  142 => 32,  140 => 31,  133 => 26,  122 => 21,  118 => 20,  114 => 19,  110 => 18,  106 => 16,  102 => 15,  94 => 9,  92 => 8,  89 => 7,  79 => 6,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Hello ArtisteController!
+{% block title %}Artistes
 {% endblock %}
 
 {% block body %}
-\t<style>
-\t\t.example-wrapper {
-\t\t\tmargin: 1em auto;
-\t\t\tmax-width: 800px;
-\t\t\twidth: 95%;
-\t\t\tfont: 18px / 1.5 sans-serif;
-\t\t}
-\t\t.example-wrapper code {
-\t\t\tbackground: #F5F5F5;
-\t\t\tpadding: 2px 6px;
-\t\t}
-\t</style>
 
-\t<div class=\"example-wrapper\">
-\t\t<h1>Hello
-\t\t\t{{ controller_name }}! ✅</h1>
-\t\t{% for art in artiste %}
-            {{art.id}}
-        {% endfor %}
-\t\tThis friendly message is coming from:
-\t\t<ul>
-\t\t\t<li>Your controller at
-\t\t\t\t<code>
-\t\t\t\t\t<a href=\"{{ '/var/www/app/src/Controller/ArtisteController.php'|file_link(0) }}\">src/Controller/ArtisteController.php</a>
-\t\t\t\t</code>
-\t\t\t</li>
-\t\t\t<li>Your template at
-\t\t\t\t<code>
-\t\t\t\t\t<a href=\"{{ '/var/www/app/templates/artiste/index.html.twig'|file_link(0) }}\">templates/artiste/index.html.twig</a>
-\t\t\t\t</code>
-\t\t\t</li>
-\t\t</ul>
+\t{% include \"templates/nav.html.twig\" %}
+
+\t<div class=\"container\">
+\t\t<h2 class=\"text-center mx-auto\">Artistes</h2>
+\t\t<div class=\"row\">
+\t\t\t<div class=\"col\">
+\t\t\t\t<div class=\"row\" id=\"flex\">
+\t\t\t\t\t{% for art in artiste %}
+\t\t\t\t\t\t<div class=\"card bg-light text-center\" style=\"max-width: 18rem; background-color: rgba(255,255,255,0.7) ; \">
+\t\t\t\t\t\t\t<div class=\"card-body\">
+\t\t\t\t\t\t\t\t<a href=\"{{path(\"app_infos_artiste\", {'id':art.id})}}\" style=\"text-decoration: none ; color: #000000 ; \">
+\t\t\t\t\t\t\t\t\t<img src={{asset(\"images/\"~art.imgArtiste)}} class=\"img-fluid img-center\" width=\"200\" height=\"200\">
+\t\t\t\t\t\t\t\t\t<h5 class=\"card-title\">{{art.Pseudo}}</h5>
+\t\t\t\t\t\t\t\t\t<p class=\"card-text\">{{art.localisation}}</p>
+\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t{% endfor %}
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t</div>
 \t</div>
+
+\t{% include \"templates/footer.html.twig\" %}
+
 {% endblock %}
 ", "artiste/index.html.twig", "/var/www/app/templates/artiste/index.html.twig");
     }

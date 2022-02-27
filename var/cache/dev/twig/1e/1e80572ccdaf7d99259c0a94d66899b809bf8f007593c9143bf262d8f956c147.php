@@ -95,40 +95,16 @@ class __TwigTemplate_0bc53bad8860af6f8aec274be0e2b38aea91e892bc0a787f7d2c83d20d9
 
 \t<main>
 \t\t<div class=\"container s002\">
-\t\t\t<form action=\"index.php\" method=\"get\">
-\t\t\t\t<fieldset>
-\t\t\t\t\t<legend>TROUVER UN ARTISTE</legend>
-\t\t\t\t</fieldset>
-\t\t\t\t<div class=\"inner-form\">
-\t\t\t\t\t<input type=\"hidden\" id=\"section\" name=\"section\" value=\"artistes\">
-\t\t\t\t\t<div class=\"input-field first-wrap\">
-\t\t\t\t\t\t<div class=\"icon-wrap\">
-\t\t\t\t\t\t\t<p style='transform: translate(0%,35%);'>🔎</p>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<input id=\"Pseudo\" name=\"Pseudo\" type=\"text\" placeholder=\"Rechercher un artiste ...\"/>
-\t\t\t\t\t</div>
-\t\t\t\t\t<div class=\"input-field second-wrap\">
-\t\t\t\t\t\t<div class=\"icon-wrap\">
-\t\t\t\t\t\t\t<p style='transform: translate(0%,35%);'>💰</p>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<input id=\"prixMin\" name=\"prixMin\" type=\"text\" placeholder=\"Prix min...\"/>
-\t\t\t\t\t</div>
-\t\t\t\t\t<div class=\"input-field second-wrap\">
-\t\t\t\t\t\t<div class=\"icon-wrap\">
-\t\t\t\t\t\t\t<p style='transform: translate(0%,35%);'>💰</p>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<input id=\"prixMax\" name=\"prixMax\" type=\"text\" placeholder=\"Prix max...\"/>
-\t\t\t\t\t</div>
-\t\t\t\t\t";
-        // line 44
-        echo "\t\t\t\t\t<div class=\"input-field fifth-wrap\">
-\t\t\t\t\t\t<button class=\"btn-search\" type=\"submit\">RECHERCHER</button>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
-\t\t\t</form>
-\t\t</div>
+\t\t\t\t<h3><i class=\"fas fa-h3\"></i>BIENVENUE SUR ART-A-Dom!</h3>
+\t\t\t";
+        // line 50
+        echo "\t\t</div>
 
-\t</main>
+\t\t";
+        // line 52
+        $this->loadTemplate("templates/footer.html.twig", "acceuil/index.html.twig", 52)->display($context);
+        // line 53
+        echo "\t</main>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -150,7 +126,7 @@ class __TwigTemplate_0bc53bad8860af6f8aec274be0e2b38aea91e892bc0a787f7d2c83d20d9
 
     public function getDebugInfo()
     {
-        return array (  124 => 44,  94 => 9,  92 => 8,  89 => 7,  79 => 6,  59 => 3,  36 => 1,);
+        return array (  107 => 53,  105 => 52,  101 => 50,  94 => 9,  92 => 8,  89 => 7,  79 => 6,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -167,44 +143,46 @@ class __TwigTemplate_0bc53bad8860af6f8aec274be0e2b38aea91e892bc0a787f7d2c83d20d9
 
 \t<main>
 \t\t<div class=\"container s002\">
-\t\t\t<form action=\"index.php\" method=\"get\">
-\t\t\t\t<fieldset>
-\t\t\t\t\t<legend>TROUVER UN ARTISTE</legend>
-\t\t\t\t</fieldset>
-\t\t\t\t<div class=\"inner-form\">
-\t\t\t\t\t<input type=\"hidden\" id=\"section\" name=\"section\" value=\"artistes\">
-\t\t\t\t\t<div class=\"input-field first-wrap\">
-\t\t\t\t\t\t<div class=\"icon-wrap\">
-\t\t\t\t\t\t\t<p style='transform: translate(0%,35%);'>🔎</p>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<input id=\"Pseudo\" name=\"Pseudo\" type=\"text\" placeholder=\"Rechercher un artiste ...\"/>
-\t\t\t\t\t</div>
-\t\t\t\t\t<div class=\"input-field second-wrap\">
-\t\t\t\t\t\t<div class=\"icon-wrap\">
-\t\t\t\t\t\t\t<p style='transform: translate(0%,35%);'>💰</p>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<input id=\"prixMin\" name=\"prixMin\" type=\"text\" placeholder=\"Prix min...\"/>
-\t\t\t\t\t</div>
-\t\t\t\t\t<div class=\"input-field second-wrap\">
-\t\t\t\t\t\t<div class=\"icon-wrap\">
-\t\t\t\t\t\t\t<p style='transform: translate(0%,35%);'>💰</p>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<input id=\"prixMax\" name=\"prixMax\" type=\"text\" placeholder=\"Prix max...\"/>
-\t\t\t\t\t</div>
-\t\t\t\t\t{# <div class=\"input-field third-wrap\">
-\t\t\t\t\t\t<div class=\"icon-wrap\">
-\t\t\t\t\t\t\t<p style='transform: translate(0%,35%);'>📅</p>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<!--this goes unused-->
-\t\t\t\t\t\t<input class=\"datepicker\" id=\"return\" type=\"date\" placeholder=\"30 Aug 2018\"/>
-\t\t\t\t\t</div> #}
-\t\t\t\t\t<div class=\"input-field fifth-wrap\">
-\t\t\t\t\t\t<button class=\"btn-search\" type=\"submit\">RECHERCHER</button>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
-\t\t\t</form>
+\t\t\t\t<h3><i class=\"fas fa-h3\"></i>BIENVENUE SUR ART-A-Dom!</h3>
+\t\t\t{# <form action=\"index.php\" method=\"get\">
+\t\t\t\t\t\t\t<fieldset>
+\t\t\t\t\t\t\t\t<legend>TROUVER UN ARTISTE</legend>
+\t\t\t\t\t\t\t</fieldset>
+\t\t\t\t\t\t\t<div class=\"inner-form\">
+\t\t\t\t\t\t\t\t<input type=\"hidden\" id=\"section\" name=\"section\" value=\"artistes\">
+\t\t\t\t\t\t\t\t<div class=\"input-field first-wrap\">
+\t\t\t\t\t\t\t\t\t<div class=\"icon-wrap\">
+\t\t\t\t\t\t\t\t\t\t<p style='transform: translate(0%,35%);'>🔎</p>
+\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t<input id=\"Pseudo\" name=\"Pseudo\" type=\"text\" placeholder=\"Rechercher un artiste ...\"/>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t<div class=\"input-field second-wrap\">
+\t\t\t\t\t\t\t\t\t<div class=\"icon-wrap\">
+\t\t\t\t\t\t\t\t\t\t<p style='transform: translate(0%,35%);'>💰</p>
+\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t<input id=\"prixMin\" name=\"prixMin\" type=\"text\" placeholder=\"Prix min...\"/>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t<div class=\"input-field second-wrap\">
+\t\t\t\t\t\t\t\t\t<div class=\"icon-wrap\">
+\t\t\t\t\t\t\t\t\t\t<p style='transform: translate(0%,35%);'>💰</p>
+\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t<input id=\"prixMax\" name=\"prixMax\" type=\"text\" placeholder=\"Prix max...\"/>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t<div class=\"input-field third-wrap\">
+\t\t\t\t\t\t\t\t\t<div class=\"icon-wrap\">
+\t\t\t\t\t\t\t\t\t\t<p style='transform: translate(0%,35%);'>📅</p>
+\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t<!--this goes unused-->
+\t\t\t\t\t\t\t\t\t<input class=\"datepicker\" id=\"return\" type=\"date\" placeholder=\"30 Aug 2018\"/>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t<div class=\"input-field fifth-wrap\">
+\t\t\t\t\t\t\t\t\t<button class=\"btn-search\" type=\"submit\">RECHERCHER</button>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</form> #}
 \t\t</div>
 
+\t\t{% include \"templates/footer.html.twig\" %}
 \t</main>
 {% endblock %}
 ", "acceuil/index.html.twig", "/var/www/app/templates/acceuil/index.html.twig");

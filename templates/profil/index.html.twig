@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Art-A-Dom!!
+{% endblock %}
+
+{% block body %}
+	{% include "templates/nav.html.twig" %}
+
+	<div class="container">
+		<div class="row">
+			<H1>Votre compte</H1>
+			<div class="col-md-12 order-md-1">
+
+				{{form_start(formUser)}}
+
+
+				<div class="col-md-4 mx-auto">
+					<hr class="mb-4" style="color: #ffffff;">
+					<h4 class="mb-3" style="color: #ffffff;">Vos coordonnées</h4>
+
+					<div class="form-group">
+						<label style="color: #ffffff;">Nom</label>
+						{{ form_widget(formUser.nom) }}
+					</div>
+					<div class="form-group">
+						<label style="color: #ffffff;">Prenom</label>
+						{{ form_widget(formUser.prenom) }}
+					</div>
+					<div class="form-group">
+						<label style="color: #ffffff;">Mail</label>
+						{{ form_widget(formUser.email) }}
+					</div>
+					<div class="form-group">
+						<button type="submit" class="btn btn-primary">Modifier</button>
+					</div>
+				</div>
+				{{form_end(formUser)}}
+			</div>
+		</div>
+	</div>
+</div>
+{% include "templates/footer.html.twig" %}{% endblock %}
