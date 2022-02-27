@@ -17,6 +17,7 @@ return [
         '/admin' => [[['_route' => 'admin', '_controller' => 'App\\Controller\\Admin\\DashboardController::index'], null, null, null, false, false, null]],
         '/artiste' => [[['_route' => 'app_artistes', '_controller' => 'App\\Controller\\ArtisteController::index'], null, null, null, false, false, null]],
         '/collectif' => [[['_route' => 'app_collectif', '_controller' => 'App\\Controller\\CollectifController::index'], null, null, null, false, false, null]],
+        '/prestations' => [[['_route' => 'app_prestations', '_controller' => 'App\\Controller\\PrestationController::index'], null, null, null, false, false, null]],
         '/profil' => [[['_route' => 'app_profil', '_controller' => 'App\\Controller\\ProfilController::index'], null, null, null, false, false, null]],
         '/register' => [[['_route' => 'app_register', '_controller' => 'App\\Controller\\RegistrationController::register'], null, null, null, false, false, null]],
         '/login' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null]],

@@ -28,12 +28,14 @@ class ArtisteController extends AbstractController
     #[Route('/artiste/&id={id}', name: 'app_infos_artiste')]
     public function infos($id, EntityManagerInterface $entityManager): Response
     {
+        $user = $this->getUser();
         $artiste = $entityManager->getRepository(Artiste::class)->find($id);
-        $prestations = $entityManager->getRepository(Prestation::class)->findBy(['id_artiste' => $id]);
+        $prestations = $entityManager->getRepository(Prestation::class)->findBy(['artiste' => $id]);
         return $this->render('artiste/infos.html.twig', [
             'controller_name' => 'ArtisteController',
             'artiste' => $artiste,
             'prestations' => $prestations,
+            'user' => $user
         ]);
     }
 }

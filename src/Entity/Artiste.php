@@ -28,8 +28,12 @@ class Artiste
     #[ORM\Column(type: 'boolean')]
     private $estGroupe;
 
-    #[ORM\OneToOne(targetEntity: DrTypeArtiste::class, cascade: ['persist', 'remove'])]
+    #[ORM\OneToOne(mappedBy: 'artiste', targetEntity: Prestation::class, cascade: ['persist', 'remove'])]
+    private $prestation;
+
+    #[ORM\ManyToOne(targetEntity: DrTypeArtiste::class, inversedBy: 'artistes')]
     private $dr_type_artiste;
+
 
     public function getId(): ?int
     {
@@ -92,6 +96,23 @@ class Artiste
     public function setEstGroupe(bool $estGroupe): self
     {
         $this->estGroupe = $estGroupe;
+
+        return $this;
+    }
+
+    public function getPrestation(): ?Prestation
+    {
+        return $this->prestation;
+    }
+
+    public function setPrestation(Prestation $prestation): self
+    {
+        // set the owning side of the relation if necessary
+        if ($prestation->getArtiste() !== $this) {
+            $prestation->setArtiste($this);
+        }
+
+        $this->prestation = $prestation;
 
         return $this;
     }

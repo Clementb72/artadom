@@ -76,7 +76,10 @@ class __TwigTemplate_ef23def78cc3411b1c944faaa3f45c2791ac891518ed24d929edd2d8192
         echo ">Les artistes</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t\t\t\t<a class=\"nav-link\" style=\"color: #fff;\" href=\"index.php?section=prestations\">Les prestations</a>
+\t\t\t\t\t\t\t\t<a class=\"nav-link\" style=\"color: #fff;\" href=";
+        // line 23
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("app_prestations");
+        echo ">Les prestations</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t</ul>
 \t\t\t\t\t</div>
@@ -175,7 +178,7 @@ class __TwigTemplate_ef23def78cc3411b1c944faaa3f45c2791ac891518ed24d929edd2d8192
 
     public function getDebugInfo()
     {
-        return array (  150 => 63,  146 => 61,  138 => 56,  135 => 55,  129 => 51,  127 => 50,  122 => 48,  115 => 44,  110 => 41,  102 => 36,  94 => 31,  91 => 30,  88 => 29,  86 => 28,  75 => 20,  69 => 17,  63 => 14,  50 => 6,  43 => 1,);
+        return array (  153 => 63,  149 => 61,  141 => 56,  138 => 55,  132 => 51,  130 => 50,  125 => 48,  118 => 44,  113 => 41,  105 => 36,  97 => 31,  94 => 30,  91 => 29,  89 => 28,  81 => 23,  75 => 20,  69 => 17,  63 => 14,  50 => 6,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -202,7 +205,7 @@ class __TwigTemplate_ef23def78cc3411b1c944faaa3f45c2791ac891518ed24d929edd2d8192
 \t\t\t\t\t\t\t\t<a class=\"nav-link\" style=\"color: #fff;\" href={{url(\"app_artistes\")}}>Les artistes</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t\t\t\t<a class=\"nav-link\" style=\"color: #fff;\" href=\"index.php?section=prestations\">Les prestations</a>
+\t\t\t\t\t\t\t\t<a class=\"nav-link\" style=\"color: #fff;\" href={{url(\"app_prestations\")}}>Les prestations</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t</ul>
 \t\t\t\t\t</div>

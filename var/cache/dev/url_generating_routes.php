@@ -20,6 +20,7 @@ return [
     'app_artistes' => [[], ['_controller' => 'App\\Controller\\ArtisteController::index'], [], [['text', '/artiste']], [], [], []],
     'app_infos_artiste' => [['id'], ['_controller' => 'App\\Controller\\ArtisteController::infos'], [], [['variable', '=', '[^/]++', 'id', true], ['text', '/artiste/&id']], [], [], []],
     'app_collectif' => [[], ['_controller' => 'App\\Controller\\CollectifController::index'], [], [['text', '/collectif']], [], [], []],
+    'app_prestations' => [[], ['_controller' => 'App\\Controller\\PrestationController::index'], [], [['text', '/prestations']], [], [], []],
     'app_profil' => [[], ['_controller' => 'App\\Controller\\ProfilController::index'], [], [['text', '/profil']], [], [], []],
     'app_register' => [[], ['_controller' => 'App\\Controller\\RegistrationController::register'], [], [['text', '/register']], [], [], []],
     'app_login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/login']], [], [], []],

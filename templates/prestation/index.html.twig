@@ -1,20 +1,57 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello PrestationController!{% endblock %}
+{% block title %}Prestations
+{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+	{% include "templates/nav.html.twig" %}
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/var/www/app/src/Controller/PrestationController.php'|file_link(0) }}">src/Controller/PrestationController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/var/www/app/templates/prestation/index.html.twig'|file_link(0) }}">templates/prestation/index.html.twig</a></code></li>
-    </ul>
-</div>
+	<div class="container">
+		<h2 class="text-center mx-auto" style="margin-top :4% ; margin-bottom : 3%">Prestations</h2>
+		<div class="row ">
+			<div class="col-9" style="padding-right :4% ; ">
+				{% for prestation in prestations %}
+					<div
+						class="row mt-4">
+						<!--<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">-->
+						<div class="card bg-light mb-3" style="width: 100%;">
+							<div class="row">
+								<div class="col-9">
+									<div>
+										<div>
+											<h3>
+												<strong>{{prestation.libelle}}</strong>
+											</h3>
+										</div>
+										<div id="descDiv{{prestation.id}}">
+											{{prestation.description}}
+										</div>
+									</div>
+								</div>
+								<div class="col-3" style="text-align: right;">Coût de la prestation :<br><strong style="font-size: xx-large;"><?= $cout; ?>{{prestation.prix}}
+										€</strong><br>
+									<a href="#">
+										<button class="btn btn-primary text-center">Ajouter au panier</button>
+									</a>
+								</div>
+								<div class="row">
+									<div>
+										<a href="#">Proposé par
+											<strong>{{prestation.artiste.pseudo}}</strong>
+										</a>
+									</div>
+									<div>
+										Temps de Prestation :
+										<strong>{{prestation.temps}}</strong>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+	{% include "templates/footer.html.twig" %}
 {% endblock %}

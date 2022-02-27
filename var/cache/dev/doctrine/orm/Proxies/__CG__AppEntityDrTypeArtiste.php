@@ -66,10 +66,10 @@ class DrTypeArtiste extends \App\Entity\DrTypeArtiste implements \Doctrine\ORM\P
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\DrTypeArtiste' . "\0" . 'id', '' . "\0" . 'App\\Entity\\DrTypeArtiste' . "\0" . 'valeur'];
+            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\DrTypeArtiste' . "\0" . 'id', '' . "\0" . 'App\\Entity\\DrTypeArtiste' . "\0" . 'valeur', '' . "\0" . 'App\\Entity\\DrTypeArtiste' . "\0" . 'artistes'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\DrTypeArtiste' . "\0" . 'id', '' . "\0" . 'App\\Entity\\DrTypeArtiste' . "\0" . 'valeur'];
+        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\DrTypeArtiste' . "\0" . 'id', '' . "\0" . 'App\\Entity\\DrTypeArtiste' . "\0" . 'valeur', '' . "\0" . 'App\\Entity\\DrTypeArtiste' . "\0" . 'artistes'];
     }
 
     /**
@@ -211,6 +211,39 @@ class DrTypeArtiste extends \App\Entity\DrTypeArtiste implements \Doctrine\ORM\P
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'setValeur', [$valeur]);
 
         return parent::setValeur($valeur);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getArtistes(): \Doctrine\Common\Collections\Collection
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getArtistes', []);
+
+        return parent::getArtistes();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function addArtiste(\App\Entity\Artiste $artiste): \App\Entity\DrTypeArtiste
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addArtiste', [$artiste]);
+
+        return parent::addArtiste($artiste);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function removeArtiste(\App\Entity\Artiste $artiste): \App\Entity\DrTypeArtiste
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeArtiste', [$artiste]);
+
+        return parent::removeArtiste($artiste);
     }
 
 }

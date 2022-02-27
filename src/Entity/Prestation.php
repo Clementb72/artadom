@@ -25,9 +25,9 @@ class Prestation
     #[ORM\Column(type: 'float')]
     private $prix;
 
-    #[ORM\OneToOne(targetEntity: Artiste::class, cascade: ['persist', 'remove'])]
+    #[ORM\ManyToOne(inversedBy: 'prestation', targetEntity: Artiste::class, cascade: ['persist', 'remove'])]
     #[ORM\JoinColumn(nullable: false)]
-    private $id_artiste;
+    private $artiste;
 
     public function getId(): ?int
     {
@@ -82,14 +82,14 @@ class Prestation
         return $this;
     }
 
-    public function getIdArtiste(): ?Artiste
+    public function getArtiste(): ?Artiste
     {
-        return $this->id_artiste;
+        return $this->artiste;
     }
 
-    public function setIdArtiste(Artiste $id_artiste): self
+    public function setArtiste(Artiste $artiste): self
     {
-        $this->id_artiste = $id_artiste;
+        $this->artiste = $artiste;
 
         return $this;
     }
