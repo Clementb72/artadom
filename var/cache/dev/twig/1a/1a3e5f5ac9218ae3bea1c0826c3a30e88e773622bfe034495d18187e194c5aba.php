@@ -122,9 +122,8 @@ class __TwigTemplate_5d33f5f215c8593205215962f5780e824639968d19d4e98f8aba354a268
         echo "\">
                 </div>
                 <div class=\"col-5\">
-                    <p class=\"description \" style=\"color : #ffffff ;\">Actuellement 5 catégories de prestations : <br> - la magie avec nos magiciens talenteux<br>- nos comédiens qui se déplacent pour vous faire rire<br>-
-                        les concerts de musique ou encore les petites symphonies pour accompagner vos évènements<br>- le chant et les chorales, gospel ...<br>- sans oublier
-                        les spectacles de danses avec nos groupes disponibles. </p>
+                    <p class=\"description \" style=\"color : #ffffff ;\">Actuellement 3 catégories de prestations : <br> - La magie avec nos magiciens talenteux<br>- Nos comédiens qui se déplacent pour vous faire rire<br>-
+                        Les concerts de musique ou encore les petites symphonies pour accompagner vos évènements
                 </div>
             </div>
         </div>
@@ -132,9 +131,9 @@ class __TwigTemplate_5d33f5f215c8593205215962f5780e824639968d19d4e98f8aba354a268
 
 </main>
 \t";
+        // line 42
+        $this->loadTemplate("templates/footer.html.twig", "collectif/index.html.twig", 42)->display($context);
         // line 43
-        $this->loadTemplate("templates/footer.html.twig", "collectif/index.html.twig", 43)->display($context);
-        // line 44
         echo "\t</main>
 ";
         
@@ -157,7 +156,7 @@ class __TwigTemplate_5d33f5f215c8593205215962f5780e824639968d19d4e98f8aba354a268
 
     public function getDebugInfo()
     {
-        return array (  138 => 44,  136 => 43,  121 => 31,  113 => 26,  94 => 9,  92 => 8,  89 => 7,  79 => 6,  59 => 3,  36 => 1,);
+        return array (  137 => 43,  135 => 42,  121 => 31,  113 => 26,  94 => 9,  92 => 8,  89 => 7,  79 => 6,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -195,9 +194,8 @@ class __TwigTemplate_5d33f5f215c8593205215962f5780e824639968d19d4e98f8aba354a268
                     <img src=\"{{asset(\"images/artiste2.jpg\")}}\">
                 </div>
                 <div class=\"col-5\">
-                    <p class=\"description \" style=\"color : #ffffff ;\">Actuellement 5 catégories de prestations : <br> - la magie avec nos magiciens talenteux<br>- nos comédiens qui se déplacent pour vous faire rire<br>-
-                        les concerts de musique ou encore les petites symphonies pour accompagner vos évènements<br>- le chant et les chorales, gospel ...<br>- sans oublier
-                        les spectacles de danses avec nos groupes disponibles. </p>
+                    <p class=\"description \" style=\"color : #ffffff ;\">Actuellement 3 catégories de prestations : <br> - La magie avec nos magiciens talenteux<br>- Nos comédiens qui se déplacent pour vous faire rire<br>-
+                        Les concerts de musique ou encore les petites symphonies pour accompagner vos évènements
                 </div>
             </div>
         </div>

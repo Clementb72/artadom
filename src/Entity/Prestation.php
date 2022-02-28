@@ -16,7 +16,7 @@ class Prestation
     #[ORM\Column(type: 'string', length: 255)]
     private $libelle;
 
-    #[ORM\Column(type: 'string', length: 255)]
+    #[ORM\Column(type: 'string', length: 900)]
     private $description;
 
     #[ORM\Column(type: 'string', length: 255)]

@@ -47,7 +47,7 @@ class __TwigTemplate_f77f97ac448bb41a079e10f052a6e6ec2bede50312a6099caa1f6a5148d
                 <h5>A propos</h5>
                 <hr class=\"bg-white mb-2 mt-0 d-inline-block mx-auto w-25\">
                 <p class=\"mb-0\">
-                    Des prestations à partir de 30€. Plus d’infos et réservations à saisir rapidement, au
+                    Des prestations à des prix abordables pour tous. Plus d’infos et réservations à saisir rapidement, au
                     06 66 66 66 66 ou artadom@gmail.com
                 </p>
             </div>
@@ -121,7 +121,7 @@ class __TwigTemplate_f77f97ac448bb41a079e10f052a6e6ec2bede50312a6099caa1f6a5148d
                 <h5>A propos</h5>
                 <hr class=\"bg-white mb-2 mt-0 d-inline-block mx-auto w-25\">
                 <p class=\"mb-0\">
-                    Des prestations à partir de 30€. Plus d’infos et réservations à saisir rapidement, au
+                    Des prestations à des prix abordables pour tous. Plus d’infos et réservations à saisir rapidement, au
                     06 66 66 66 66 ou artadom@gmail.com
                 </p>
             </div>
