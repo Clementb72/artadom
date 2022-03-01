@@ -138,7 +138,10 @@ class __TwigTemplate_c205b474920f1db9ef6cec069184f5c0f6e9ed6b6c5ad5bbf366e50831e
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t<div class=\"row\">
 \t\t\t\t\t\t\t\t\t<div>
-\t\t\t\t\t\t\t\t\t\t<a href=\"#\">Proposé par
+\t\t\t\t\t\t\t\t\t\t<a href=\"";
+            // line 39
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_infos_artiste", ["id" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["prestation"], "artiste", [], "any", false, false, false, 39), "id", [], "any", false, false, false, 39)]), "html", null, true);
+            echo "\">Proposé par
 \t\t\t\t\t\t\t\t\t\t\t<strong>";
             // line 40
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["prestation"], "artiste", [], "any", false, false, false, 40), "pseudo", [], "any", false, false, false, 40), "html", null, true);
@@ -187,7 +190,7 @@ class __TwigTemplate_c205b474920f1db9ef6cec069184f5c0f6e9ed6b6c5ad5bbf366e50831e
 
     public function getDebugInfo()
     {
-        return array (  169 => 54,  165 => 52,  152 => 45,  144 => 40,  132 => 31,  125 => 27,  121 => 26,  115 => 23,  105 => 15,  101 => 14,  94 => 9,  92 => 8,  89 => 7,  79 => 6,  59 => 3,  36 => 1,);
+        return array (  172 => 54,  168 => 52,  155 => 45,  147 => 40,  143 => 39,  132 => 31,  125 => 27,  121 => 26,  115 => 23,  105 => 15,  101 => 14,  94 => 9,  92 => 8,  89 => 7,  79 => 6,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -230,7 +233,7 @@ class __TwigTemplate_c205b474920f1db9ef6cec069184f5c0f6e9ed6b6c5ad5bbf366e50831e
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t<div class=\"row\">
 \t\t\t\t\t\t\t\t\t<div>
-\t\t\t\t\t\t\t\t\t\t<a href=\"#\">Proposé par
+\t\t\t\t\t\t\t\t\t\t<a href=\"{{path(\"app_infos_artiste\", {'id':prestation.artiste.id})}}\">Proposé par
 \t\t\t\t\t\t\t\t\t\t\t<strong>{{prestation.artiste.pseudo}}</strong>
 \t\t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t\t</div>
